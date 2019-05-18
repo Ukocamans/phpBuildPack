@@ -29,6 +29,10 @@ http {
 
 	server {
 		# define an easy to reference name that can be used in try_files
+        location /apple-app-site-association {
+            default_type application/pkcs7-mime;
+        }
+        
 		location @heroku-fcgi {
 			include fastcgi_params;
 
